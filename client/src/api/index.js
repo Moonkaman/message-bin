@@ -8,6 +8,12 @@ function connect(cb) {
   })
 }
 
+function disconnect(cb) {
+  socket.on('disconnect', _ => {
+    cb()
+  })
+}
+
 function recieveMessage(cb) {
   socket.on('message', (message,name,time) => {
     cb(message,name,time)
@@ -18,4 +24,4 @@ function sendMessage(message, name) {
   socket.emit('message', message, name);
 }
 
-export { connect, sendMessage, recieveMessage };
+export { connect, sendMessage, recieveMessage, disconnect };

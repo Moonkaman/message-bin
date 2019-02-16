@@ -3,7 +3,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBox } from "@fortawesome/free-solid-svg-icons";
 
-import { connect, sendMessage, recieveMessage } from "./api";
+import { connect, sendMessage, recieveMessage,disconnect } from "./api";
 
 import "./App.css";
 
@@ -29,6 +29,15 @@ class App extends Component {
         ]
       });
     });
+
+    disconnect(_ => {
+      this.setState({
+        messages: [
+          ...this.state.messages,
+          { message: "Disconnected", name: "User", time: ''}
+        ]
+      })
+    })
 
     recieveMessage((newMessage, name, time) => {
       this.setState({
