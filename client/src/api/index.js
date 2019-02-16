@@ -1,6 +1,6 @@
 import openSocket from 'socket.io-client';
 
-const socket = openSocket('http://localhost:8000/');
+const socket = openSocket('https://message-bin-nb.herokuapp.com/');
 
 function connect(cb) {
   socket.on('connected', (message,time) => {
