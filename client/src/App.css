@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.App h1 {
+  font-weight: normal;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.messages-cont {
+  margin: 0 20px;
+  padding: 0px 20px 3px 20px;
+  border: 1px solid lightgray;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  height: 80%;
+  overflow: auto;
+}
+
+.message-cont {
+  margin: 0px;
+  padding: 5px 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-cont p {
+  margin: 0px;
+}
+
+.message-cont.border {
+  border-bottom: 1px dashed gray;
+}
+
+form {
+  padding: 0 20px;
+  height: 15%;
+}
+
+form .message-flex {
+  display: flex;
+  padding-top: 10px;
+}
+
+form textarea {
+  width: 90%;
+  height: 50px;
+  overflow: hidden;
+  font-size: 18px;
+  padding: 5px;
+}
+
+form button {
+  overflow: hidden;
+  width: 10%;
+  height: 50px;
+}
+
+form input {
+  width: 100%;
+  font-size: 18px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: none;
+  border: 1px solid gray;
+  padding: 5px;
+}
